@@ -6,7 +6,7 @@
 int registro()
 { 
     setlocale(LC_ALL, "Portuguese");
-    int selecao = 0;
+
     char cpf[40];
     char nome[40];
     char sobrenome[40];
@@ -59,32 +59,10 @@ int registro()
     printf("Cadastro realizado com sucesso.\n");
     printf("\n\n");
 
-    printf("Escolha uma opção:\n\n");
-    printf("\t1- Cadastrar mais colaboradores\n");
-    printf("\t2- Voltar ao menu\n\n");
     system("pause");
-
-    scanf("%d", &selecao);
-    switch(selecao){
-    case 1:
-         system("cls");
-         registro();
-       
-        scanf("%d", &selecao);
-        break;
-    case 2:
-     system("pause");
-                system("cls");
-                return 0;
-                break;
-    default:
-                printf("Opção inválida! Tente novamente.\n\n");
-                system("pause");
-                system("cls");
-                return 0;
-                break;
-}
-
+    system("cls");
+    return 0;
+    
 }
 
 int consultar()
@@ -162,7 +140,6 @@ int main()
         printf("\t1-Registrar nomes\n");
         printf("\t2-Consultar nomes\n");
         printf("\t3-Deletar nomes\n\n"); // fim do menu
-        printf("\t4-Sair do sistema\n\n");
 
         printf("Escolha uma opção: ");
         scanf("%d", &opcao); // armazena a escolha do usuário
@@ -178,17 +155,17 @@ int main()
             case 3:
                 deletar();
                 break;
-            case 4:
-                printf("Obrigado por utilizar o sistema\n");
-                return 0;
-                break;
-
             default:
                 printf("Opção inválida! Tente novamente.\n\n");
+                system("pause");
                 system("cls");
-                main();
+                
                 break;
-          } // fim da seleção
+                return 0;
+        } // fim da seleção
     }
-
+    system("pause");
+    system("cls");
+    return 0;
+    
     }
