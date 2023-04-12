@@ -73,16 +73,18 @@ int registro()
         scanf("%d", &selecao);
         break;
     case 2:
-     system("pause");
-                system("cls");
-                return 0;
-                break;
+     
+        system("cls");
+        
+        return 0;
+        break;
     default:
-                printf("Opção inválida! Tente novamente.\n\n");
-                system("pause");
-                system("cls");
-                return 0;
-                break;
+        printf("Opção inválida! Tente novamente.\n\n");
+        system("pause");
+        system("cls");
+
+        return 0;
+        break;
 }
 
 }
